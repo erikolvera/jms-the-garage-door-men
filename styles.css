@@ -1248,64 +1248,6 @@ header.scrolled {
   border-color: var(--accent-color);
 }
 
-/* Center the craftsmanship/stats block beneath the pair */
-.ba-showcase .gallery-info {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-  align-items: center;
-}
-
-.ba-showcase .gallery-stats {
-  width: 100%;
-  max-width: 420px;
-}
-
-.gallery-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.gallery-info h3 {
-  font-size: 2.25rem;
-  font-weight: 800;
-}
-
-.gallery-info p {
-  color: var(--text-secondary);
-}
-
-.gallery-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.stat-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
-  text-align: center;
-}
-
-.stat-num {
-  font-family: var(--font-headings);
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--accent-color);
-}
-
-.stat-desc {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 0.25rem;
-}
-
 /* Honor EXIF orientation so phone photos display upright */
 #hero-main-photo,
 .ba-card img,
@@ -1417,9 +1359,9 @@ header.scrolled {
   transform: scale(1);
 }
 
-/* Collapsed gallery — show the first 4, reveal the rest with the toggle.
-   Hidden items keep their lazy-loading images unfetched until expanded. */
-.work-gallery.is-collapsed .work-item:nth-child(n+5) {
+/* Hidden gallery items (JS reveals them incrementally). Their lazy-loading
+   images aren't fetched until shown. */
+.work-item[hidden] {
   display: none;
 }
 
@@ -1427,6 +1369,8 @@ header.scrolled {
   margin-top: 2.5rem;
   display: flex;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* ----- Lightbox ----- */

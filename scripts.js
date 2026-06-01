@@ -149,12 +149,6 @@ const I18N = {
     'cap.residential': 'Residential',
     'cap.commercial': 'Commercial',
     'cap.all': 'You name it — he does it all',
-    'ba.info.title': 'Craftsmanship That Speaks For Itself',
-    'ba.info.p1': "Whether you have a rusted, heavy door with snapped tension springs or want a modern insulated aluminum design to elevate your home's aesthetics, Marlon delivers clean, durable craftsmanship.",
-    'ba.info.p2': 'From single-family homes to storefronts, warehouses, and apartment complexes, Marlon sources premium-grade steel springs (rated for 20,000+ cycles) and high-quality LiftMaster openers to keep any door running smoothly for years.',
-    'ba.stat.rating': 'Client Rating',
-    'ba.stat.response.num': 'Same-Day',
-    'ba.stat.response': 'Response Time',
 
     'gallery2.badge': 'Project Gallery',
     'gallery2.title': 'Our <span>Recent Work</span>',
@@ -187,8 +181,9 @@ const I18N = {
     'lightbox.close': 'Close',
     'lightbox.prev': 'Previous',
     'lightbox.next': 'Next',
-    'gallery.showMore': 'See more pictures',
-    'gallery.showLess': 'See fewer pictures',
+    'gallery.showMore': 'See more ({n})',
+    'gallery.showAll': 'Show all ({n})',
+    'gallery.showLess': 'Show less',
 
     'rev.badge': 'Customer Reviews',
     'rev.title': 'What Our <span>Clients Say</span>',
@@ -331,12 +326,6 @@ const I18N = {
     'cap.residential': 'Residencial',
     'cap.commercial': 'Comercial',
     'cap.all': 'Lo que necesite — él lo hace todo',
-    'ba.info.title': 'Trabajo Que Habla Por Sí Mismo',
-    'ba.info.p1': 'Ya sea que tenga una puerta pesada y oxidada con resortes de tensión rotos o quiera un diseño moderno de aluminio aislado para realzar la estética de su hogar, Marlon ofrece un trabajo limpio y duradero.',
-    'ba.info.p2': 'Desde casas unifamiliares hasta locales comerciales, bodegas y complejos de apartamentos, Marlon usa resortes de acero de grado premium (clasificados para más de 20,000 ciclos) y motores LiftMaster de alta calidad para mantener cualquier puerta funcionando sin problemas durante años.',
-    'ba.stat.rating': 'Calificación de Clientes',
-    'ba.stat.response.num': 'El Mismo Día',
-    'ba.stat.response': 'Tiempo de Respuesta',
 
     'gallery2.badge': 'Galería de Proyectos',
     'gallery2.title': 'Nuestro <span>Trabajo Reciente</span>',
@@ -369,8 +358,9 @@ const I18N = {
     'lightbox.close': 'Cerrar',
     'lightbox.prev': 'Anterior',
     'lightbox.next': 'Siguiente',
-    'gallery.showMore': 'Ver más fotos',
-    'gallery.showLess': 'Ver menos fotos',
+    'gallery.showMore': 'Ver más ({n})',
+    'gallery.showAll': 'Ver todas ({n})',
+    'gallery.showLess': 'Ver menos',
 
     'rev.badge': 'Reseñas de Clientes',
     'rev.title': 'Lo Que Dicen <span>Nuestros Clientes</span>',
@@ -624,27 +614,68 @@ function initGalleryLightbox() {
   });
 }
 
+// Project gallery reveal settings
+const INITIAL_GALLERY = 4; // photos shown before any reveal
+const GALLERY_STEP = 5;    // photos revealed per "See more" click
+
 /**
- * 3c. Project Gallery "See more" toggle
- * Collapses the gallery to the first few photos and reveals the rest on click.
- * Progressive enhancement: without JS the gallery shows every photo and the
- * button stays hidden.
+ * 3c. Project Gallery incremental reveal
+ * Shows the first few photos, then reveals 5 more per click ("See more (n)"),
+ * or every photo at once ("Show all (total)"), with a "Show less" to collapse.
+ * Progressive enhancement: without JS every photo shows and the buttons stay hidden.
+ * Because revealed items use the `hidden` attribute, their lazy images aren't
+ * fetched until shown.
  */
 function initGalleryToggle() {
   const gallery = document.getElementById('work-gallery');
-  const button = document.getElementById('gallery-toggle');
-  if (!gallery || !button) return;
+  if (!gallery) return;
 
-  gallery.classList.add('is-collapsed');
-  button.hidden = false;
+  const items = Array.from(gallery.querySelectorAll('.work-item'));
+  const total = items.length;
+  const moreBtn = document.getElementById('gallery-more');
+  const allBtn = document.getElementById('gallery-all');
+  const lessBtn = document.getElementById('gallery-less');
+  if (!moreBtn || !allBtn || !lessBtn || total <= INITIAL_GALLERY) return;
 
-  button.addEventListener('click', () => {
-    const collapsed = gallery.classList.toggle('is-collapsed');
-    // Drive the label through data-i18n so applyLang keeps it correct on EN/ES switch
-    const key = collapsed ? 'gallery.showMore' : 'gallery.showLess';
-    button.setAttribute('data-i18n', key);
-    button.textContent = t(key);
+  let visible = INITIAL_GALLERY;
+
+  const render = () => {
+    items.forEach((item, i) => { item.hidden = i >= visible; });
+    const remaining = total - visible;
+    if (remaining > 0) {
+      const step = Math.min(GALLERY_STEP, remaining);
+      moreBtn.hidden = false;
+      moreBtn.textContent = fillTemplate(t('gallery.showMore'), { n: step });
+      allBtn.hidden = false;
+      allBtn.textContent = fillTemplate(t('gallery.showAll'), { n: total });
+      lessBtn.hidden = true;
+    } else {
+      moreBtn.hidden = true;
+      allBtn.hidden = true;
+      lessBtn.hidden = false;
+      lessBtn.textContent = t('gallery.showLess');
+    }
+  };
+
+  moreBtn.addEventListener('click', () => {
+    visible = Math.min(visible + GALLERY_STEP, total);
+    render();
   });
+  allBtn.addEventListener('click', () => {
+    visible = total;
+    render();
+  });
+  lessBtn.addEventListener('click', () => {
+    visible = INITIAL_GALLERY;
+    render();
+    const header = document.getElementById('work-gallery-header');
+    if (header) header.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Re-render labels (they contain counts) when the language changes.
+  document.addEventListener('langchange', render);
+
+  render();
 }
 
 /**
