@@ -361,11 +361,6 @@ header.scrolled {
   flex-shrink: 0;
 }
 
-.lang-toggle-mobile {
-  font-size: 1.1rem;
-  padding: 0.6rem 1.4rem;
-}
-
 @media (min-width: 992px) {
   .nav-menu {
     display: flex;
@@ -373,17 +368,31 @@ header.scrolled {
   .menu-toggle {
     display: none;
   }
-  /* The mobile menu's toggle is redundant on desktop */
-  .lang-toggle-mobile {
-    display: none;
-  }
 }
 
-/* On smaller screens the header is tight, so the language toggle lives
-   inside the mobile menu instead of the header bar. */
+/* On mobile the header shows the language toggle in place of the phone number,
+   and the brand shrinks to one line to keep the bar uncluttered. */
 @media (max-width: 991px) {
   #lang-toggle {
+    display: inline-flex;
+  }
+  .phone-link {
     display: none;
+  }
+  .nav-cta {
+    gap: 0.6rem;
+  }
+  .logo {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  .logo svg {
+    width: 18px;
+    height: 18px;
+  }
+  .lang-toggle {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
   }
 }
 
