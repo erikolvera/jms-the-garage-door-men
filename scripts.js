@@ -49,73 +49,36 @@ const I18N = {
     'hero.card.desc': 'Top quality work, no exceptions.',
 
     'services.badge': 'Our Expertise',
-    'services.title': 'Professional <span>Garage Services</span>',
-    'services.subtitle': 'Marlon handles everything from full structural installations to complex mechanical repairs and general maintenance. No job is too big or small.',
+    'services.title': 'Our <span>Services</span>',
+    'services.subtitle': 'Expert solutions for every garage door need.',
     'svc.install.title': 'Installation & Upgrades',
-    'svc.install.desc': "Upgrade your home's curb appeal and security with modern, high-performance garage doors and openers.",
-    'svc.install.li1': 'Custom steel, glass, & wood doors',
-    'svc.install.li2': 'Smart Wi-Fi opener assemblies',
-    'svc.install.li3': 'Keyless keypads & key fob programming',
-    'svc.install.li4': 'Heavy-duty tracking system setup',
+    'svc.install.desc': "Custom doors, smart openers, and keypads. Transform your home's curb appeal with modern solutions.",
+    'svc.install.alt': 'Modern flush garage door with a row of windows',
     'svc.repair.title': 'Repairs & Troubleshooting',
-    'svc.repair.desc': 'Rapid diagnostics and fixes for any mechanical or electrical failures. Same-day emergency service available.',
-    'svc.repair.li1': 'Broken torsion spring replacement',
-    'svc.repair.li2': 'Snapped steel cable recovery',
-    'svc.repair.li3': 'Off-track alignment & resetting',
-    'svc.repair.li4': 'Opener motor & gear assembly rebuilds',
+    'svc.repair.desc': 'Emergency service for springs, cables, tracks, and openers. Available when you need us most.',
+    'svc.repair.alt': 'Dark-stained arched wood carriage doors',
     'svc.maint.title': 'Inspections & Tune-ups',
-    'svc.maint.desc': 'Preventative maintenance programs that quiet noisy garage doors and extend the operational life of structural components.',
-    'svc.maint.li1': '25-point comprehensive structural audit',
-    'svc.maint.li2': 'Professional spring & track lubrication',
-    'svc.maint.li3': 'Tension balance calibration',
-    'svc.maint.li4': 'Safety sensor alignment & check',
-    'svc.configure': 'Configure Quote →',
+    'svc.maint.desc': 'Preventative maintenance with our comprehensive 25-point audit to keep your door running smoothly.',
+    'svc.maint.alt': 'Classic white long-panel garage door',
+    'svc.configure': 'Configure Quote ›',
 
     'quote.badge': 'No Hidden Fees',
-    'quote.title': 'Interactive <span>Quote Request Planner</span>',
-    'quote.subtitle': 'Since every garage door job is unique, Marlon quotes depending on your specific situation. Use this planner to select what you need and instantly call or text him the details.',
-    'quote.step1.title': '1. Select Service Category',
-    'quote.step1.desc': 'Choose the general class of service required:',
+    'quote.title': 'Get Your <span>Custom Quote</span>',
+    'quote.subtitle': 'Fast, transparent pricing tailored to your needs.',
+    'quote.step1.title': 'What do you need?',
     'quote.radio.install': 'Installation',
     'quote.radio.repair': 'Repair',
     'quote.radio.maint': 'Tune-up',
-    'quote.step3.title': '2. Provide Your Details',
-    'quote.step3.desc': 'Add your name and phone number so Marlon can address your request properly:',
     'quote.label.name': 'Your Name',
-    'quote.ph.name': "Marlon's Customer",
+    'quote.ph.name': 'John Doe',
     'quote.err.name': 'Please enter your name.',
-    'quote.label.phone': 'Phone Number (For Call/Text back)',
+    'quote.label.phone': 'Phone Number',
     'quote.err.phone': 'Please enter a valid phone number.',
-    'quote.label.notes': 'Additional Details / Project Location (Optional)',
-    'quote.ph.notes': "Describe any specific requests, e.g., 'Double car door, opener makes clicking noise, located in Katy TX'",
-    'quote.output.title': 'Your Formatted Message Details',
-    'quote.optionA.title': 'Option A: Call Marlon (Fastest Response)',
-    'quote.optionA.desc': 'Marlon works out in the field — calling him directly is the fastest way to reach him and get a quick quote over the phone.',
-    'quote.optionA.btn': 'Call 409-934-2301 Now',
-    'quote.optionB.title': 'Option B: Text Your Details',
-    'quote.optionB.desc': 'Prefer to text? Send this pre-filled message with your project details and Marlon will reply as soon as he can.',
-    'quote.optionB.btn': 'Text Message Marlon',
-
-    'optTitle.installation': 'Select Installation Interests:',
-    'optTitle.repair': 'What problems are you experiencing?',
-    'optTitle.maintenance': 'Select Maintenance Services:',
-
-    'opt.install.door': 'New Custom Garage Door',
-    'opt.install.opener': 'New Automatic Opener Installation',
-    'opt.install.spring': 'Torsion/Extension Spring System',
-    'opt.install.keypad': 'Keyless Entry Pad & Remotes',
-    'opt.install.sensors': 'Safety Sensor Eyes Setup',
-    'opt.repair.spring': "Replace Broken Springs (Door is heavy/won't lift)",
-    'opt.repair.cables': 'Frayed/Snapped Cables Replacement',
-    'opt.repair.track': 'Re-align Off-track Garage Door',
-    'opt.repair.opener': "Opener Troubleshooting (Motor hums, door won't move)",
-    'opt.repair.rollers': 'Squeaking/Worn Roller Replacement',
-    'opt.repair.panel': 'Damaged Slat or Panel Repair',
-    'opt.maint.inspection': 'Full 25-Point Safety Inspection',
-    'opt.maint.lube': 'High-Performance Roller/Spring Lubrication',
-    'opt.maint.tighten': 'Structural Bolt & Hinge Tightening',
-    'opt.maint.balance': 'Door Balance & Tension Calibration',
-    'opt.other': 'Other',
+    'quote.label.notes': 'Location (Optional)',
+    'quote.ph.notes': 'Houston, TX',
+    'quote.send.prompt': 'Choose how to send your quote request:',
+    'quote.optionA.btn': 'Call Marlon Now',
+    'quote.optionB.btn': 'Send Text Message',
 
     'service.installation': 'Installation',
     'service.repair': 'Repair',
@@ -123,8 +86,7 @@ const I18N = {
     'service.generic': 'garage',
     'sms.defaultName': 'Valued Client',
     'sms.greeting': 'Hello Marlon! My name is {name}. I need a quote for {service} services.',
-    'sms.specifically': ' Specifically: {details}.',
-    'sms.notes': ' Additional Details: {notes}',
+    'sms.notes': ' Location: {notes}',
 
     'why.badge': 'Trusted Professional',
     'why.title': 'Why Choose <span>JMS Garage Door Man</span>',
@@ -226,73 +188,36 @@ const I18N = {
     'hero.card.desc': 'Trabajo de máxima calidad, sin excepciones.',
 
     'services.badge': 'Nuestra Experiencia',
-    'services.title': '<span>Servicios de Garaje</span> Profesionales',
-    'services.subtitle': 'Marlon se encarga de todo, desde instalaciones estructurales completas hasta reparaciones mecánicas complejas y mantenimiento general. Ningún trabajo es demasiado grande o pequeño.',
+    'services.title': 'Nuestros <span>Servicios</span>',
+    'services.subtitle': 'Soluciones expertas para toda necesidad de puerta de garaje.',
     'svc.install.title': 'Instalación y Mejoras',
-    'svc.install.desc': 'Mejore la apariencia y la seguridad de su hogar con puertas de garaje y motores modernos de alto rendimiento.',
-    'svc.install.li1': 'Puertas personalizadas de acero, vidrio y madera',
-    'svc.install.li2': 'Motores inteligentes con Wi-Fi',
-    'svc.install.li3': 'Teclados sin llave y programación de controles',
-    'svc.install.li4': 'Instalación de sistemas de riel de alta resistencia',
+    'svc.install.desc': 'Puertas personalizadas, motores inteligentes y teclados. Transforme la apariencia de su hogar con soluciones modernas.',
+    'svc.install.alt': 'Puerta de garaje moderna y lisa con una fila de ventanas',
     'svc.repair.title': 'Reparaciones y Diagnóstico',
-    'svc.repair.desc': 'Diagnóstico rápido y solución de cualquier falla mecánica o eléctrica. Servicio de emergencia disponible el mismo día.',
-    'svc.repair.li1': 'Reemplazo de resortes de torsión rotos',
-    'svc.repair.li2': 'Reparación de cables de acero rotos',
-    'svc.repair.li3': 'Alineación y reajuste de puertas descarriladas',
-    'svc.repair.li4': 'Reconstrucción de motores y engranajes',
+    'svc.repair.desc': 'Servicio de emergencia para resortes, cables, rieles y motores. Disponible cuando más lo necesita.',
+    'svc.repair.alt': 'Puertas de cochera de madera arqueada con tinte oscuro',
     'svc.maint.title': 'Inspecciones y Mantenimiento',
-    'svc.maint.desc': 'Programas de mantenimiento preventivo que silencian las puertas ruidosas y extienden la vida útil de los componentes estructurales.',
-    'svc.maint.li1': 'Auditoría estructural completa de 25 puntos',
-    'svc.maint.li2': 'Lubricación profesional de resortes y rieles',
-    'svc.maint.li3': 'Calibración del balance de tensión',
-    'svc.maint.li4': 'Alineación y revisión de sensores de seguridad',
-    'svc.configure': 'Configurar Cotización →',
+    'svc.maint.desc': 'Mantenimiento preventivo con nuestra auditoría completa de 25 puntos para que su puerta funcione sin problemas.',
+    'svc.maint.alt': 'Puerta de garaje clásica blanca de panel largo',
+    'svc.configure': 'Configurar Cotización ›',
 
     'quote.badge': 'Sin Cargos Ocultos',
-    'quote.title': '<span>Planificador de Cotización</span> Interactivo',
-    'quote.subtitle': 'Como cada trabajo de puerta de garaje es único, Marlon cotiza según su situación específica. Use este planificador para seleccionar lo que necesita y llamar o enviar un mensaje al instante con los detalles.',
-    'quote.step1.title': '1. Seleccione la Categoría de Servicio',
-    'quote.step1.desc': 'Elija el tipo general de servicio que necesita:',
+    'quote.title': 'Obtenga su <span>Cotización Personalizada</span>',
+    'quote.subtitle': 'Precios rápidos y transparentes adaptados a sus necesidades.',
+    'quote.step1.title': '¿Qué necesita?',
     'quote.radio.install': 'Instalación',
     'quote.radio.repair': 'Reparación',
     'quote.radio.maint': 'Mantenimiento',
-    'quote.step3.title': '2. Proporcione Sus Datos',
-    'quote.step3.desc': 'Agregue su nombre y número de teléfono para que Marlon pueda atender su solicitud correctamente:',
     'quote.label.name': 'Su Nombre',
-    'quote.ph.name': 'Cliente de Marlon',
+    'quote.ph.name': 'Juan Pérez',
     'quote.err.name': 'Por favor ingrese su nombre.',
-    'quote.label.phone': 'Número de Teléfono (Para llamada/mensaje)',
+    'quote.label.phone': 'Número de Teléfono',
     'quote.err.phone': 'Por favor ingrese un número de teléfono válido.',
-    'quote.label.notes': 'Detalles Adicionales / Ubicación del Proyecto (Opcional)',
-    'quote.ph.notes': "Describa cualquier solicitud específica, ej.: 'Puerta para dos autos, el motor hace un ruido de clic, ubicada en Katy TX'",
-    'quote.output.title': 'Detalles de Su Mensaje',
-    'quote.optionA.title': 'Opción A: Llamar a Marlon (Respuesta Más Rápida)',
-    'quote.optionA.desc': 'Marlon trabaja en el campo — llamarlo directamente es la forma más rápida de contactarlo y obtener una cotización rápida por teléfono.',
-    'quote.optionA.btn': 'Llamar al 409-934-2301 Ahora',
-    'quote.optionB.title': 'Opción B: Enviar Sus Detalles por Mensaje',
-    'quote.optionB.desc': '¿Prefiere enviar un mensaje? Envíe este mensaje ya preparado con los detalles de su proyecto y Marlon le responderá lo antes posible.',
-    'quote.optionB.btn': 'Enviar Mensaje a Marlon',
-
-    'optTitle.installation': 'Seleccione los Servicios de Instalación:',
-    'optTitle.repair': '¿Qué problemas está experimentando?',
-    'optTitle.maintenance': 'Seleccione los Servicios de Mantenimiento:',
-
-    'opt.install.door': 'Nueva Puerta de Garaje Personalizada',
-    'opt.install.opener': 'Instalación de Nuevo Motor Automático',
-    'opt.install.spring': 'Sistema de Resortes de Torsión/Extensión',
-    'opt.install.keypad': 'Teclado de Acceso sin Llave y Controles',
-    'opt.install.sensors': 'Instalación de Sensores de Seguridad',
-    'opt.repair.spring': 'Reemplazo de Resortes Rotos (La puerta pesa/no sube)',
-    'opt.repair.cables': 'Reemplazo de Cables Desgastados/Rotos',
-    'opt.repair.track': 'Realinear Puerta de Garaje Descarrilada',
-    'opt.repair.opener': 'Diagnóstico del Motor (El motor zumba, la puerta no se mueve)',
-    'opt.repair.rollers': 'Reemplazo de Rodillos Desgastados/Ruidosos',
-    'opt.repair.panel': 'Reparación de Panel o Lámina Dañada',
-    'opt.maint.inspection': 'Inspección de Seguridad Completa de 25 Puntos',
-    'opt.maint.lube': 'Lubricación de Alto Rendimiento de Rodillos/Resortes',
-    'opt.maint.tighten': 'Ajuste de Tornillos y Bisagras Estructurales',
-    'opt.maint.balance': 'Calibración del Balance y la Tensión de la Puerta',
-    'opt.other': 'Otro',
+    'quote.label.notes': 'Ubicación (Opcional)',
+    'quote.ph.notes': 'Houston, TX',
+    'quote.send.prompt': 'Elija cómo enviar su solicitud de cotización:',
+    'quote.optionA.btn': 'Llamar a Marlon Ahora',
+    'quote.optionB.btn': 'Enviar Mensaje de Texto',
 
     'service.installation': 'Instalación',
     'service.repair': 'Reparación',
@@ -300,8 +225,7 @@ const I18N = {
     'service.generic': 'garaje',
     'sms.defaultName': 'Cliente Estimado',
     'sms.greeting': '¡Hola Marlon! Me llamo {name}. Necesito una cotización para servicios de {service}.',
-    'sms.specifically': ' Específicamente: {details}.',
-    'sms.notes': ' Detalles adicionales: {notes}',
+    'sms.notes': ' Ubicación: {notes}',
 
     'why.badge': 'Profesional de Confianza',
     'why.title': 'Por Qué Elegir a <span>JMS Garage Door Man</span>',
@@ -727,163 +651,66 @@ function initQuotePlanner() {
   if (!plannerForm) return;
 
   const serviceRadios = plannerForm.querySelectorAll('input[name="service_type"]');
-  const optionsTitle = document.getElementById('options-title');
-  const detailsGrid = document.getElementById('details-grid');
 
-  // Output block elements
+  // Output / action elements
   const quoteOutput = document.getElementById('quote-output');
-  const summaryContent = document.getElementById('summary-content');
   const textCta = document.getElementById('text-cta');
   const callCta = document.getElementById('call-cta');
 
-  // Defined details options map. Each option carries a stable id (used to
-  // preserve selection across language switches) and an i18n key whose
-  // translated label becomes both the visible text and the SMS value.
-  const detailsMap = {
-    installation: [
-      { id: 'opt_new_door', key: 'opt.install.door' },
-      { id: 'opt_opener', key: 'opt.install.opener' },
-      { id: 'opt_spring_system', key: 'opt.install.spring' },
-      { id: 'opt_keypad', key: 'opt.install.keypad' },
-      { id: 'opt_sensors', key: 'opt.install.sensors' },
-      { id: 'opt_install_other', key: 'opt.other' }
-    ],
-    repair: [
-      { id: 'opt_broken_spring', key: 'opt.repair.spring' },
-      { id: 'opt_cables', key: 'opt.repair.cables' },
-      { id: 'opt_track', key: 'opt.repair.track' },
-      { id: 'opt_opener_repair', key: 'opt.repair.opener' },
-      { id: 'opt_rollers', key: 'opt.repair.rollers' },
-      { id: 'opt_panel', key: 'opt.repair.panel' },
-      { id: 'opt_repair_other', key: 'opt.other' }
-    ],
-    maintenance: [
-      { id: 'opt_inspection', key: 'opt.maint.inspection' },
-      { id: 'opt_lube', key: 'opt.maint.lube' },
-      { id: 'opt_tighten', key: 'opt.maint.tighten' },
-      { id: 'opt_balance', key: 'opt.maint.balance' },
-      { id: 'opt_maint_other', key: 'opt.other' }
-    ]
-  };
-
-  // 4a. Update dynamic sub-options when service category changes.
-  // checkedIds lets us repaint in a new language while keeping selections.
-  const updateSubOptions = (serviceType, checkedIds = []) => {
-    detailsGrid.innerHTML = '';
-    const options = detailsMap[serviceType] || [];
-
-    optionsTitle.textContent = t('optTitle.' + serviceType);
-
-    options.forEach(opt => {
-      const label = t(opt.key);
-      const checkboxCard = document.createElement('div');
-      checkboxCard.className = 'checkbox-option';
-      checkboxCard.innerHTML = `
-        <input type="checkbox" id="${opt.id}" name="service_details" value="${label.replace(/"/g, '&quot;')}" ${checkedIds.includes(opt.id) ? 'checked' : ''}>
-        <label for="${opt.id}" class="checkbox-card">
-          <div class="checkbox-indicator">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <span class="checkbox-label">${label}</span>
-        </label>
-      `;
-      detailsGrid.appendChild(checkboxCard);
-    });
-
-    // Re-attach change event listener to newly created checkboxes to update summary live
-    const checkboxes = detailsGrid.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(cb => cb.addEventListener('change', generateLiveSummary));
-  };
-
-  // 4b. Generate the live output summary and pre-filled message links
+  // Build the pre-filled call/text links from the customer's inputs.
+  // The text (SMS) link carries a localized, ready-to-send message body.
   const generateLiveSummary = () => {
     const nameInput = document.getElementById('client_name');
-    const phoneInput = document.getElementById('client_phone');
     const serviceRadio = plannerForm.querySelector('input[name="service_type"]:checked');
-    const checkedDetails = Array.from(plannerForm.querySelectorAll('input[name="service_details"]:checked')).map(cb => cb.value);
     const notesInput = document.getElementById('client_notes');
 
-    const name = nameInput.value.trim() || t('sms.defaultName');
+    const name = nameInput ? nameInput.value.trim() || t('sms.defaultName') : t('sms.defaultName');
     const serviceType = serviceRadio ? serviceRadio.value : null;
-    const notes = notesInput.value.trim();
+    const notes = notesInput ? notesInput.value.trim() : '';
 
     // Localized service name
     const serviceName = serviceType ? t('service.' + serviceType) : t('service.generic');
 
-    // Build the descriptive summary text from localized templates
+    // Build the descriptive message from localized templates
     let summaryText = fillTemplate(t('sms.greeting'), { name, service: serviceName });
-    if (checkedDetails.length > 0) {
-      summaryText += fillTemplate(t('sms.specifically'), { details: checkedDetails.join(', ') });
-    }
     if (notes) {
       summaryText += fillTemplate(t('sms.notes'), { notes });
     }
 
-    // Display summary on screen
-    summaryContent.textContent = summaryText;
+    if (!textCta || !callCta) return;
 
     // Build the SMS link (handling iOS vs Android separator)
     const smsNumber = '4099342301'; // Clean number for link
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     const smsSeparator = isIOS ? '&' : '?';
 
-    // Create text message URI
-    const smsUrl = `sms:+1${smsNumber}${smsSeparator}body=${encodeURIComponent(summaryText)}`;
-    textCta.href = smsUrl;
+    // Create text message URI with the pre-filled body
+    textCta.href = `sms:+1${smsNumber}${smsSeparator}body=${encodeURIComponent(summaryText)}`;
 
-    // Create call URL with dynamic details (just click to call Marlon)
+    // Call link is a simple click-to-call
     callCta.href = `tel:+14099342301`;
   };
 
-  // Helper: current service type and checked option ids
-  const getCurrentServiceType = () => {
-    const radio = plannerForm.querySelector('input[name="service_type"]:checked');
-    return radio ? radio.value : 'repair';
-  };
-  const getCheckedIds = () => Array.from(detailsGrid.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.id);
-
-  // Event Listeners for quote planner inputs
+  // Rebuild the message when the service category changes
   serviceRadios.forEach(radio => {
-    radio.addEventListener('change', (e) => {
-      updateSubOptions(e.target.value);
-      generateLiveSummary();
-    });
+    radio.addEventListener('change', generateLiveSummary);
   });
 
-  // Track keyup/change on input fields to update summary live
+  // Track typing on the text fields to keep the message current
   const textInputs = plannerForm.querySelectorAll('input[type="text"], input[type="tel"], textarea');
   textInputs.forEach(input => {
     input.addEventListener('input', generateLiveSummary);
   });
 
-  // Re-render the dynamic parts (option labels + summary) when language changes,
-  // preserving the user's current selections.
-  document.addEventListener('langchange', () => {
-    updateSubOptions(getCurrentServiceType(), getCheckedIds());
-    generateLiveSummary();
-  });
+  // Rebuild the message (with localized templates) when language changes
+  document.addEventListener('langchange', generateLiveSummary);
 
-  // Initialize with the currently checked radio (defaults to 'repair')
-  const defaultChecked = plannerForm.querySelector('input[name="service_type"]:checked');
-  if (defaultChecked) {
-    updateSubOptions(defaultChecked.value);
-  } else {
-    const repairRadio = document.getElementById('srv_repair');
-    if (repairRadio) {
-      repairRadio.checked = true;
-      updateSubOptions('repair');
-    }
-  }
   generateLiveSummary();
 
-  // Prevent form submission redirect, handle it by revealing the lead output
+  // Prevent an Enter-key submit from navigating; keep focus in the form area
   plannerForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (plannerForm.checkValidity()) {
-      quoteOutput.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (quoteOutput) quoteOutput.scrollIntoView({ behavior: 'smooth' });
   });
 }
 
