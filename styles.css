@@ -277,6 +277,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .logo span {
@@ -286,13 +287,14 @@ header.scrolled {
 .nav-menu {
   display: none;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .nav-link {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -303,21 +305,6 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-}
-
-.phone-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-headings);
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--accent-color);
-}
-
-.phone-link:hover {
-  color: var(--accent-hover);
-  transform: scale(1.02);
 }
 
 .menu-toggle {
@@ -367,7 +354,11 @@ header.scrolled {
   flex-shrink: 0;
 }
 
-@media (min-width: 992px) {
+/* The inline nav only appears once there's room for the longer Spanish
+   labels (e.g. "Cotización Interactiva"); below this the hamburger takes over.
+   English would fit narrower, but the breakpoint targets the longer language
+   so the bar never overflows after a translation. */
+@media (min-width: 1150px) {
   .nav-menu {
     display: flex;
   }
@@ -376,21 +367,17 @@ header.scrolled {
   }
 }
 
-/* On mobile the header shows the language toggle in place of the phone number,
-   and the brand shrinks to one line to keep the bar uncluttered. */
-@media (max-width: 991px) {
+/* Below the inline-nav breakpoint the brand shrinks so the bar stays
+   uncluttered next to the language toggle and hamburger menu. */
+@media (max-width: 1149px) {
   #lang-toggle {
     display: inline-flex;
-  }
-  .phone-link {
-    display: none;
   }
   .nav-cta {
     gap: 0.6rem;
   }
   .logo {
     font-size: 1rem;
-    white-space: nowrap;
   }
   .logo svg {
     width: 18px;
