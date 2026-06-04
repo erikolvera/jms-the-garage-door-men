@@ -1,8 +1,8 @@
-# JMS Garage Door Man
+# JMS - The Garage Door Man
 
-Marketing website for **JMS Garage Door Man** — a garage door installation, repair,
-and maintenance business owned and operated by Marlon, serving the Houston, TX area
-(and traveling far for larger jobs). Residential, commercial — you name it, he does it all.
+Marketing website for **JMS - The Garage Door Man** — a garage door installation, repair,
+and maintenance business serving the Houston, TX area (and traveling far for larger jobs).
+Residential and commercial — we do it all.
 
 🔗 **Live preview:** run locally (see below) — the production build is fully static and
 can be hosted anywhere.
@@ -16,7 +16,7 @@ can be hosted anywhere.
   and Spanish-preferring browsers are auto-detected on first visit.
 - **Interactive Quote Planner** — visitors pick a service category and specifics, enter
   their details, and the site builds a ready-to-send SMS (with iOS/Android-correct
-  formatting) or a one-tap call to Marlon. Calling is presented as the fastest option.
+  formatting) or a one-tap call to JMS. Calling is presented as the fastest option.
 - **Project Gallery + lightbox** — a responsive masonry grid of real jobs with a
   keyboard-accessible, full-screen image viewer (arrow keys / swipe / Esc).
 - **Before & After showcase** — side-by-side comparison cards.
@@ -93,4 +93,4 @@ both languages stay complete.
 
 ## Contact
 
-Call or text Marlon: **409-934-2301** — available 24/7 for emergencies.
+Call or text JMS: **409-934-2301** — available 24/7 for emergencies.
