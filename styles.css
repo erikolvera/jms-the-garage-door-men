@@ -397,6 +397,14 @@ header.scrolled {
   }
 }
 
+/* On phones the full brand name collides with the language toggle, so the
+   header trims to just the badge + "JMS" (full name stays via aria-label). */
+@media (max-width: 640px) {
+  .logo-suffix {
+    display: none;
+  }
+}
+
 /* Mobile Nav Overlay */
 .mobile-nav {
   position: fixed;
