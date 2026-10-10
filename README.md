@@ -4,8 +4,9 @@ Marketing website for **JMS - The Garage Door Men** — a garage door installati
 and maintenance business serving the Houston, TX area (and traveling far for larger jobs).
 Residential and commercial — we do it all.
 
-🔗 **Live preview:** run locally (see below) — the production build is fully static and
-can be hosted anywhere.
+🔗 **Live site:** [erikolvera.github.io/jms-the-garage-door-men](https://erikolvera.github.io/jms-the-garage-door-men/)
+— deployed to GitHub Pages on every push to `main`. The build is fully static and can
+be hosted anywhere.
 
 ---
 
@@ -18,7 +19,7 @@ can be hosted anywhere.
   their details, and the site builds a ready-to-send SMS (with iOS/Android-correct
   formatting) or a one-tap call to JMS. Calling is presented as the fastest option.
 - **Project Gallery + lightbox** — a responsive masonry grid of real jobs with a
-  keyboard-accessible, full-screen image viewer (arrow keys / swipe / Esc).
+  keyboard-accessible, full-screen image viewer (arrow keys / Esc).
 - **Before & After showcase** — side-by-side comparison cards.
 - **Optimized images** — all photos are auto-oriented, resized, and served as WebP,
   keeping the build small and fast on mobile.
